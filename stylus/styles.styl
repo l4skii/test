@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/earlyaccess/notosansjp.css')
+@import '_l4skii.styl'
+
+html,
+body 
+  defaults()
+  font-family-NotoSansJP()
+  width 100%
+  height 100%
+  margin 0 auto
+  font-size 16px
+  font-weight 400
+  scroll-behavior smooth
+  letter-spacing -.024em
+  color #15181b
+
+.wrap
+  wrap()
+
+a
+  position relative
+  transition .16s
+  display inline-block
+  link(#FF585E)
+
+.header
+  margin 0 0 40px
+  background #FF7E83
+  +bp_s(sm)
+    margin 0 0 80px
+  h1
+    padding 20px 0
+    align-items center
+    display flex
+    pxtorem(font-size, 16)
+    font-weight 600
+    color #fff
+    letter-spacing -.008em
+    &:before
+      width 32px
+      height 26px
+      margin 0 12px 0 0
+      background transparent url("../images/logo-batonpath-white.svg") center /contain no-repeat
+      block(transparent)
+  span.sub-title
+    padding 0 0 20px
+    pxtorem(font-size, 24)
+    font-weight 500
+    color #fff
+    display block
+
+.genre
+  margin 0 0 24px
+  &:last-child
+    margin 0 0 80px
+  h2
+    pxtorem(font-size, 24)
+    font-weight 500
+    color #FF585E
+    margin 0 0 16px
+    
+  .faq-toggle
+    border-top 1px solid #e3e3e3
+    h3
+      position relative
+      padding 16px 24px 16px 0
+      color #888
+      line-height: 1.47059;
+      letter-spacing -.008em
+      display block
+      cursor pointer
+      &::selection
+        crossOpacity(0)
+      &:active
+        background-color rgba(255,126,131,.2)
+      &.open
+        &:after
+          transform rotate(180deg)
+
+      &:after
+        block(transparent)
+        position absolute
+        top calc( 50% - 3px )
+        right 0
+        width 12px
+        height 6px
+        background url("../images/icon-min-arrow01.svg") center /contain no-repeat
+        transition .4s
+        transform rotate(0deg)
+
+    &:last-child
+      border-bottom 1px solid #e3e3e3
+
+    bxz()
+    .answer
+      display none
+      padding 0 0 16px
+      cursor default
+      p
+        pxtorem(font-size, 14)
+        text-align justify
+        line-height: 1.47059;
+        transition .4s
+        letter-spacing -.008em
+        transition 0 .4s
+        opacity 0
+        &::selection
+          crossOpacity(0)
+        &.open
+          opacity 1
+          transition .4s .16s
+        span.app-icons
+          height 1em
+          padding 0 .25em
+          img
+            padding .2em 0 0
+            height 1em
+            vertical-align top
+      ul
+        width 100%
+        margin 16px 0
+        letter-spacing -.008em
+        text-align justify
+        opacity 0
+        &.open
+          opacity 1
+          transition .4s .16s
+        li
+          position relative
+          padding 0 0 0 .8em
+          margin 8px 0
+          word-break break-all
+          white-space normal
+          &:before
+            position absolute
+            top calc( 50% - .12em )
+            left 0
+            width 6px
+            height 6px
+            border 1px solid #FF585E
+            bxz()
+            bdrs(50%)
+            block(transparent)
+
+span.jumper
+  cursor pointer
+  a#page-top
+    align-items center
+    display flex
+    color #ff7e83
+    &:before
+      width 8px
+      height 8px
+      margin 0 8px 0 0
+      background transparent url("../images/icon-arrow01.svg") center /contain no-repeat
+      block(transparent)
+
+.download-links
+  margin 20px 0
+  justify-content space-between
+  display flex
+  +bp_s(sm)
+    justify-content flex-start
+  a
+    width calc( 50% - 10px )
+    +bp_s(sm)
+      width 160px
+      margin 0 24px 0 0
+    img
+      width 100%
+
+footer
+  padding 24px 0
+  background #FF7E83
+  color #fff
+  ul.links
+    li
+      a
+        position relative
+        padding .25em 0
+        letter-spacing -.008em
+        color #fff !important
+        display block
+        pxtorem(font-size, 14)
+        &:after
+          block(transparent)
+          position absolute
+          top calc( 50% - 6px )
+          right 0
+          width 6px
+          height 12px
+          background url("../images/icon-min-arrow02.svg") center /contain no-repeat
+          transition .4s
+      span.min-title
+        margin 16px 0 .25em
+        display block
+  span.copyright
+    margin 40px 0 0
+    text-align center
+    pxtorem(font-size, 12)
+    letter-spacing -.008em
+    display block
+
+.by-batonpath
+  padding 24px 0
+  justify-content center
+  display flex
+  img
+    width 240px
